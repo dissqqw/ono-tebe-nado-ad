@@ -3,7 +3,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 183px;
+  gap: 148px; /* было 183px */
 }
 
 .content-section {
@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px;
+  padding: 92px 24px; /* было 92px 50px */
 }
 
 .header__nav-list {
@@ -32,11 +32,17 @@
 .header__nav-link {
   font-size: 18px;
   text-underline-position: under;
+  text-underline-offset: 4px; /* добавил */
+}
+
+.header__nav-link_active {
+  text-decoration: none;
 }
 
 .header__logo {
   display: block;
   width: 148px;
+  height: 105px; /* добавил */
   justify-self: center;
 }
 
@@ -48,7 +54,8 @@
   justify-self: end;
   font-style: normal;
   font-size: 18px;
-  line-height: 1.35;
+  line-height: 24.3px; /* было 1.35 */
+  letter-spacing: 0.18px; /* добавил */
 }
 
 .header__contact a {
@@ -64,10 +71,11 @@
 /* === Hero секция === */
 .hero {
   position: relative;
-  padding: 165px 50px 50px 50px;
+  padding: 165px 50px 50px; /* оставил как было */
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; /* добавил */
 }
 
 .hero__overlay {
@@ -90,9 +98,14 @@
   color: #FFF;
   font-weight: bold;
   font-size: 100px;
-  line-height: 1.15;
+  line-height: 1; /* было 1.15 */
   letter-spacing: 30px;
   text-transform: uppercase;
+  padding: 0; /* убрал лишние отступы */
+}
+
+.hero__title span {
+  line-height: 125px; /* добавил */
 }
 
 .hero__title span:nth-child(1) {
@@ -112,31 +125,34 @@
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; /* было flex-end */
   align-items: center;
   gap: 78px;
-  padding: 136px 0 0;
+  padding: 0 50px 55px; /* изменил */
 }
 
 .hero__subtitle {
   color: #FFF;
   font-size: 22px;
-  line-height: 1.27;
+  line-height: 28px; /* было 1.27 */
   text-transform: uppercase;
   word-spacing: 18px;
 }
 
 .hero__button {
   border: 1px #FFF solid;
-  padding: 14px 32px;
+  padding: 0; /* изменил */
+  width: 256px; /* добавил */
+  height: 51px; /* добавил */
   color: #FFF;
   font-family: 'Raleway', sans-serif;
-  font-weight: normal;
+  font-weight: 500; /* было normal */
   font-size: 22px;
-  line-height: 1;
+  line-height: 51px; /* добавил */
   text-transform: uppercase;
   background-color: transparent;
   cursor: pointer;
+  text-align: center; /* добавил */
 }
 
 .hero__button:hover {
@@ -146,28 +162,32 @@
 
 /* === Секция лотов === */
 .auction-lots {
-  padding: 0 50px;
+  padding: 0 24px; /* было 0 50px */
 }
 
 .auction-lots__title {
-  padding: 0 0 30px 40px;
+  padding: 179px 0 26px 64px; /* изменил полностью */
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
   text-transform: uppercase;
 }
 
+/* === Стилизация карточек === */
 .auction-lots__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex; /* было grid */
+  flex-wrap: wrap; /* добавил */
   gap: 25px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 20px; /* добавил */
+  justify-content: flex-start; /* добавил */
 }
 
 .auction-lots__grid li {
-  min-height: 450px;
+  min-height: 563px; /* было 450px */
+  max-width: 334px; /* добавил */
+  flex-grow: 1; /* добавил */
 }
 
 .card-link {
@@ -181,8 +201,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 450px;
-  padding: 50px 40px;
+  min-height: 563px; /* было 450px */
+  padding: 51px 40px 48px; /* было 50px 40px */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -238,19 +258,20 @@
 
 .view-more {
   display: block;
-  margin: 30px 0 0 40px;
+  margin: 30px 0 0 64px; /* изменил */
   font-size: 20px;
   text-decoration-line: underline;
   text-underline-position: under;
   width: fit-content;
 }
 
-/* === Шаг 7: Секция "О нас" === */
+/* === Секция "О нас" === */
 .about-us {
   display: grid;
-  grid-template-columns: 334px 1fr; /* левая колонка как карточка, правая - оставшееся пространство */
-  gap: 24px;
-  padding: 0 50px;
+  grid-template-columns: 334px 1fr; /* было 1fr 1fr 1fr */
+  gap: 25px; /* было 24px */
+  padding: 34px 24px 0; /* было 0 50px */
+  margin-top: 0; /* добавил */
 }
 
 .about-us__logo-container {
@@ -269,10 +290,15 @@
 
 .about-us__logo-img {
   width: 148px;
+  height: 114px; /* добавил */
 }
 
 .about-us__content {
-  padding-top: 100px; /* заголовок на одной линии с центром круга */
+  grid-column: 2; /* было 2/4 */
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* добавил */
+  padding-top: 100px; /* добавил */
 }
 
 .about-us__title {
@@ -280,13 +306,14 @@
   font-size: 40px;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 104px;
+  padding: 0; /* убрал старые отступы */
+  margin: 0; /* убрал старые отступы */
 }
 
 .about-us__text {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 0; /* было 25px */
 }
 
 .about-us__text p {
@@ -295,19 +322,23 @@
 }
 
 .about-us__text p:first-child {
-  margin-bottom: 25px; /* отступ только у первого абзаца */
+  margin-bottom: 25px;
+  padding-top: 76px; /* добавил */
 }
 
 .about-us__text p:last-child {
-  margin-bottom: 0; /* у второго абзаца отступа нет */
+  margin-bottom: 0;
+  padding-top: 25px; /* добавил */
 }
 
-/* === Шаг 8: Footer === */
+/* === Footer === */
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
-  padding: 180px 50px 80px;
+  grid-template-columns: auto 1fr auto; /* было flex */
+  justify-content: space-between; /* было flex */
+  align-items: start; /* добавил */
+  padding: 180px 50px 88px; /* было 180px 50px 80px */
+  gap: 140px; /* добавил */
 }
 
 .footer__contacts {
@@ -327,7 +358,8 @@
 }
 
 .footer__nav {
-  justify-self: center;
+  justify-self: center; /* добавил */
+  padding-left: 35px; /* добавил */
 }
 
 .footer__nav-list {
@@ -360,7 +392,8 @@
 }
 
 .footer__social-icon {
-  width: auto;
+  width: 48px; /* было auto */
   height: 48px;
 }
+
 
