@@ -66,9 +66,9 @@
   text-decoration: none;
 }
 
+/* УБИРАЕМ hover эффект для навигации */
 .header__nav-link:hover {
-  background-color: #000000;
-  color: #FFF;
+  /* убираем все эффекты */
 }
 
 .header__logo {
@@ -95,6 +95,7 @@
   text-underline-position: under;
 }
 
+/* ОСТАВЛЯЕМ hover эффект для контактов */
 .text-link:hover {
   background-color: #000000;
   color: #FFF;
