@@ -22,21 +22,53 @@
 .header__nav-list {
   display: flex;
   gap: 32px;
-  list-style: circle;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.header__nav-item_no-bullit {
-  list-style: none;
+.header__nav-item {
+  position: relative;
+}
+
+/* Кружок-маркер для пунктов меню (кроме первого) */
+.header__nav-item:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0.5px solid #000000;
+  border-radius: 50%;
 }
 
 .header__nav-link {
   font-size: 18px;
   text-underline-position: under;
   text-underline-offset: 4px;
+  color: #000000;
+}
+
+/* Первый пункт без подчеркивания */
+.header__nav-item:first-child .header__nav-link {
+  text-decoration: none;
+}
+
+/* Второй и третий пункты со стандартным подчеркиванием */
+.header__nav-item:nth-child(2) .header__nav-link,
+.header__nav-item:nth-child(3) .header__nav-link {
+  text-decoration: underline;
 }
 
 .header__nav-link_active {
   text-decoration: none;
+}
+
+.header__nav-link:hover {
+  background-color: #000000;
+  color: #FFF;
 }
 
 .header__logo {
@@ -377,6 +409,16 @@
   text-underline-position: under;
 }
 
+/* Первый пункт в футере без подчеркивания */
+.footer__nav-list li:first-child .footer__nav-link {
+  text-decoration: none;
+}
+
+/* Остальные пункты с подчеркиванием */
+.footer__nav-list li:not(:first-child) .footer__nav-link {
+  text-decoration: underline;
+}
+
 .footer__social {
   justify-self: end;
 }
@@ -397,6 +439,5 @@
   width: 48px;
   height: 48px;
 }
-
 
 
