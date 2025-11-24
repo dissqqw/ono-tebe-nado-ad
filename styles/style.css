@@ -364,12 +364,3 @@
   height: 48px;
 }
 
-/* === Повторяющиеся стили вынесены в отдельные классы === */
-.text-link:hover {
-  background-color: #000000;
-  color: #FFF;
-}
-
-.active-link {
-  text-decoration: none;
-}
