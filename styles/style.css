@@ -11,6 +11,7 @@
   margin: 0 auto;
 }
 
+/* === Header === */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -68,7 +69,7 @@
 
 /* УБИРАЕМ hover эффект для навигации */
 .header__nav-link:hover {
-  text-decoration: none; /* убираем подчеркивание при hover */
+  text-decoration: none;
 }
 
 .header__logo {
@@ -92,15 +93,14 @@
 
 .header__contact a {
   display: block;
-  text-underline-offset: 4px; /* такое же расстояние как у навигации */
+  text-underline-offset: 4px;
 }
-
 
 
 /* === Hero секция === */
 .hero {
   position: relative;
-  height: 757px; /* ФИКСИРОВАННАЯ ВЫСОТА */
+  height: 757px;
   padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
@@ -134,7 +134,7 @@
   letter-spacing: 30px;
   text-transform: uppercase;
   padding: 0;
-  flex-grow: 1; /* занимает доступное пространство */
+  flex-grow: 1;
 }
 
 .hero__title span {
@@ -161,7 +161,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto; /* прижимаем к низу */
+  margin-top: auto;
 }
 
 .hero__subtitle {
@@ -217,7 +217,8 @@
 }
 
 .auction-lots__grid li {
-  min-height: 563px;
+  width: 334px;
+  height: 596px;
 }
 
 .card-link {
@@ -228,15 +229,12 @@
 
 .lot-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 563px;
-  padding: 51px 40px 48px;
+  width: 100%;
+  height: 100%;
+  padding: 50px 40px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100%;
 }
 
 .lot-card--film {
@@ -380,7 +378,7 @@
   display: block;
   font-size: 18px;
   line-height: 1.35;
-  text-underline-offset: 4px; /* такое же расстояние */
+  text-underline-offset: 4px;
 }
 
 .footer__contacts p {
@@ -403,7 +401,7 @@
 .footer__nav-link {
   font-size: 18px;
   line-height: normal;
-  text-underline-offset: 4px; /* такое же расстояние */
+  text-underline-offset: 4px;
 }
 
 /* Первый пункт в футере без подчеркивания */
@@ -419,7 +417,7 @@
 /* УБИРАЕМ hover эффект для футера */
 .footer__nav-link:hover,
 .footer__contacts a:hover {
-  text-decoration: none; /* убираем подчеркивание при hover */
+  text-decoration: none;
 }
 
 .footer__social {
@@ -442,6 +440,4 @@
   width: 48px;
   height: 48px;
 }
-
-/* УБИРАЕМ ВСЕ hover эффекты с черными рамками */
 
