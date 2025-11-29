@@ -22,7 +22,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/ваш-username/ono-tebe-nado-ad.git
+git clone https://github.com/dissqqw/ono-tebe-nado-ad.git
 ```
 
 2. Откройте `index.html` в браузере
