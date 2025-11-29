@@ -1,3 +1,5 @@
+/* === Глобальные отступы и расположение === */
+
 .main {
   display: flex;
   flex-direction: column;
@@ -59,6 +61,7 @@
 .header__nav-item:nth-child(3) .header__nav-link {
   text-decoration: underline;
   text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
 .header__nav-link_active {
@@ -89,11 +92,18 @@
   letter-spacing: 0.18px;
 }
 
+.header__nav-item:nth-child(2) .header__nav-link,
+.header__nav-item:nth-child(3) .header__nav-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
 .header__contact a {
   display: block;
   text-underline-offset: 4px;
-
   text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 /* Убираем hover-эффекты для контактов в хедере */
@@ -274,6 +284,7 @@
   height: 100%;
 }
 
+/* === Карточки лотов === */
 .lot-card__title {
   color: #FFF;
   font-weight: bold;
@@ -281,6 +292,8 @@
   line-height: 1.2;
   text-decoration-line: underline;
   text-transform: uppercase;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
   margin-bottom: auto;
 }
 
@@ -297,6 +310,7 @@
   font-size: 20px;
   text-decoration-line: underline;
   text-underline-position: under;
+  text-decoration-thickness: 1px;
   width: fit-content;
 }
 
@@ -386,8 +400,10 @@
   line-height: 1.35;
   text-underline-offset: 4px;
   text-decoration: underline;
-
+  text-decoration-thickness: 1px;
 }
+
+
 
 .footer__contacts p {
   font-size: 18px;
@@ -417,9 +433,9 @@
   text-decoration: none;
 }
 
-/* Остальные пункты с подчеркиванием */
 .footer__nav-list li:not(:first-child) .footer__nav-link {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 /* УБИРАЕМ hover эффект для футера */
@@ -459,5 +475,4 @@
   height: 48px;
 
 }
-
 
