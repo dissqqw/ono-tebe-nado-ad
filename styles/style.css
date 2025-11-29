@@ -90,13 +90,8 @@
   font-size: 18px;
   line-height: 24.3px;
   letter-spacing: 0.18px;
-}
-
-.header__nav-item:nth-child(2) .header__nav-link,
-.header__nav-item:nth-child(3) .header__nav-link {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
+  max-width: 240px;
+  width: 100%;
 }
 
 .header__contact a {
@@ -475,4 +470,6 @@
   height: 48px;
 
 }
+
+
 
